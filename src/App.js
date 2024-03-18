@@ -73,9 +73,9 @@ const CountryRegionCitySelect = () => {
                 ))}
             </select>
             <WebAppProvider>
-              <MainButton onClick={webApp.sendData({
+              <MainButton onClick={webApp ? webApp.sendData({
                 'city': selectedCity
-              })}/>
+              }) : console.log('web app is null')}/>
             </WebAppProvider>
         </div>
     );
